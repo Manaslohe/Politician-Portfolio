@@ -41,7 +41,7 @@ const VolunteerPage = () => {
             <div className="text-left lg:pr-12">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
                 Let's build Nagpur
-                <span className="text-orange-500"> together</span>
+                <span className="text-[#0640AD]"> together</span>
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -50,8 +50,8 @@ const VolunteerPage = () => {
 
               <div className="hidden lg:block space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 rounded-full bg-[#0640AD]/10 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-[#0640AD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
                   </div>
@@ -62,8 +62,8 @@ const VolunteerPage = () => {
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 rounded-full bg-[#0640AD]/10 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-[#0640AD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
@@ -90,7 +90,7 @@ const VolunteerPage = () => {
                     value={formData.fullName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all duration-200"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#0640AD] focus:border-[#0640AD] transition-all duration-200"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -103,7 +103,7 @@ const VolunteerPage = () => {
                     value={formData.mobile}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all duration-200"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#0640AD] focus:border-[#0640AD] transition-all duration-200"
                     placeholder="Enter your mobile number"
                   />
                 </div>
@@ -116,7 +116,7 @@ const VolunteerPage = () => {
                     value={formData.ward}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all duration-200"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#0640AD] focus:border-[#0640AD] transition-all duration-200"
                     placeholder="Enter your ward or locality"
                   />
                 </div>
@@ -127,7 +127,7 @@ const VolunteerPage = () => {
                     name="role"
                     value={formData.role}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all duration-200"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#0640AD] focus:border-[#0640AD] transition-all duration-200"
                   >
                     <option value="volunteer">General Volunteer</option>
                     <option value="social">Social Media Warrior</option>
@@ -136,14 +136,14 @@ const VolunteerPage = () => {
                   </select>
                 </div>
 
-                <div className="flex items-center gap-3 bg-orange-50 p-4 rounded-xl">
+                <div className="flex items-center gap-3 bg-[#0640AD]/10 p-4 rounded-xl">
                   <input
                     type="checkbox"
                     id="whatsapp"
                     name="whatsapp"
                     checked={formData.whatsapp}
                     onChange={handleChange}
-                    className="w-5 h-5 rounded text-orange-500 focus:ring-orange-500 border-gray-300"
+                    className="w-5 h-5 rounded text-[#0640AD] focus:ring-[#0640AD] border-gray-300"
                   />
                   <label htmlFor="whatsapp" className="text-sm text-gray-700">
                     Join our WhatsApp community for updates and coordination
@@ -152,7 +152,7 @@ const VolunteerPage = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-orange-500 text-white py-4 rounded-xl font-medium hover:bg-orange-600 transform hover:scale-[1.02] transition-all duration-200 shadow-lg shadow-orange-500/20"
+                  className="w-full bg-[#0640AD] text-white py-4 rounded-xl font-medium hover:bg-[#05368F] transform hover:scale-[1.02] transition-all duration-200 shadow-lg shadow-[#0640AD]/20"
                 >
                   Join the Movement
                 </button>

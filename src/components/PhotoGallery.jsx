@@ -30,7 +30,7 @@ const PhotoGallery = () => {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Explore the moments that define our community's journey and progress.
           </p>
-          <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full mt-6"></div>
+          <div className="w-24 h-1 bg-[#0640AD] mx-auto rounded-full mt-6"></div>
         </div>
 
         {/* Gallery Slider */}
@@ -77,7 +77,7 @@ const PhotoGallery = () => {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex ? 'bg-orange-500' : 'bg-gray-300 hover:bg-gray-400'
+                index === currentIndex ? 'bg-[#0640AD]' : 'bg-gray-300 hover:bg-gray-400'
               }`}
             ></button>
           ))}

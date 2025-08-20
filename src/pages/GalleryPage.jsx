@@ -86,7 +86,7 @@ const GalleryPage = () => {
                     className={({ selected }) =>
                       `px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                         selected
-                          ? 'bg-orange-500 text-white shadow-md'
+                          ? 'bg-[#0640AD] text-white shadow-md'
                           : 'text-gray-700 hover:bg-gray-200'
                       }`
                     }
@@ -120,7 +120,7 @@ const GalleryPage = () => {
                   exit={{ opacity: 0 }}
                   className="flex justify-center py-20"
                 >
-                  <div className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin" />
+                  <div className="w-16 h-16 border-4 border-[#0640AD] border-t-transparent rounded-full animate-spin" />
                 </motion.div>
               ) : (
                 categories.map((category) => (

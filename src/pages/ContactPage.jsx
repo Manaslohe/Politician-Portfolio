@@ -56,7 +56,7 @@ const ContactPage = () => {
                 <input
                   type="text"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0640AD] focus:border-[#0640AD] transition-all"
                   placeholder="Enter your name"
                 />
               </div>
@@ -67,7 +67,7 @@ const ContactPage = () => {
                 <input
                   type="text"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0640AD] focus:border-[#0640AD] transition-all"
                   placeholder="Enter your email or phone"
                 />
               </div>
@@ -78,13 +78,13 @@ const ContactPage = () => {
                 <textarea
                   required
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0640AD] focus:border-[#0640AD] transition-all"
                   placeholder="Write your message here"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-orange-500 text-white py-3 rounded-lg font-medium hover:bg-orange-600 transition-colors duration-300"
+                className="w-full bg-[#0640AD] text-white py-3 rounded-lg font-medium hover:bg-[#05368F] transition-colors duration-300"
               >
                 Send Message
               </button>
@@ -105,8 +105,8 @@ const ContactPage = () => {
             <div className="bg-gray-100 p-8 rounded-2xl shadow-md">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Contact Details</h3>
               <div className="space-y-2 text-gray-600">
-                <p>Email: <a href="mailto:contact@vikasthakre.in" className="text-orange-500 hover:underline">contact@vikasthakre.in</a></p>
-                <p>Phone: <a href="tel:+91XXXXXXXXXX" className="text-orange-500 hover:underline">+91-XXXXXXXXXX</a></p>
+                <p>Email: <a href="mailto:contact@vikasthakre.in" className="text-[#0640AD] hover:underline">contact@vikasthakre.in</a></p>
+                <p>Phone: <a href="tel:+91XXXXXXXXXX" className="text-[#0640AD] hover:underline">+91-XXXXXXXXXX</a></p>
               </div>
             </div>
 

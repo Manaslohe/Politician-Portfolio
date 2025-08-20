@@ -42,7 +42,7 @@ const Header = () => {
           {/* Donate Button aligned right */}
           <div className="hidden lg:block ml-auto flex-shrink-0">
             <Link to="/volunteer">
-              <button className="bg-[#0066FF] hover:bg-blue-700 text-white font-space px-8 py-3 rounded-full transition-all duration-300">
+              <button className="bg-[#0066FF] hover:bg-[#0640AD] text-white font-space px-8 py-3 rounded-full transition-all duration-300">
                 Know More | Join the Movement 
               </button>
             </Link>
@@ -66,13 +66,13 @@ const Header = () => {
           <div className="px-4 py-6 space-y-4">
             {navItems.map((item, index) => (
               <Link key={index} to={item.href}>
-                <span className="block text-white hover:text-blue-200 font-medium py-2 transition-colors">
+                <span className="block text-white hover:text-[#0640AD] font-medium py-2 transition-colors">
                   {item.name}
                 </span>
               </Link>
             ))}
             <Link to="/volunteer">
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-full transition-colors mt-4">
+              <button className="w-full bg-[#0640AD] hover:bg-[#0066FF] text-white font-semibold py-3 rounded-full transition-colors mt-4">
                 Know More | Join the Movement 
               </button>
             </Link>

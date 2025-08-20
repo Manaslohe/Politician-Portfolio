@@ -36,7 +36,7 @@ const VisionMission = () => {
           </p>
           <div className="flex items-center justify-center gap-2 mt-4">
             {[...Array(3)].map((_, i) => (
-              <span key={i} className="text-orange-500 text-2xl">★</span>
+              <span key={i} className="text-[#0640AD] text-2xl">★</span>
             ))}
           </div>
         </div>
@@ -52,8 +52,8 @@ const VisionMission = () => {
               >
                 {/* Icon */}
                 <div className="relative mb-6">
-                  <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mb-4">
-                    <Icon className="w-8 h-8 text-orange-500" strokeWidth={1.5} />
+                  <div className="w-16 h-16 rounded-full bg-[#0640AD]/10 flex items-center justify-center mb-4">
+                    <Icon className="w-8 h-8 text-[#0640AD]" strokeWidth={1.5} />
                   </div>
                 </div>
 
@@ -69,7 +69,7 @@ const VisionMission = () => {
 
                 {/* Button */}
                 <button
-                  className="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors duration-300"
+                  className="bg-[#0640AD] text-white px-6 py-2 rounded-lg hover:bg-[#0640AD]/90 transition-colors duration-300"
                   onClick={() => navigate('/initiatives')}
                 >
                   Learn More

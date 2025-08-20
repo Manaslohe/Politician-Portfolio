@@ -74,7 +74,7 @@ const BlogPage = () => {
               placeholder="Search articles..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
+              className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0640AD] focus:border-[#0640AD] transition-colors"
             />
           </div>
           <button
@@ -94,7 +94,7 @@ const BlogPage = () => {
               exit={{ opacity: 0 }}
               className="flex justify-center py-20"
             >
-              <div className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin" />
+              <div className="w-16 h-16 border-4 border-[#0640AD] border-t-transparent rounded-full animate-spin" />
             </motion.div>
           ) : (
             <motion.div
@@ -147,7 +147,7 @@ const BlogPage = () => {
                           {post.views}
                         </div>
                       </div>
-                      <button className="mt-4 w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2">
+                      <button className="mt-4 w-full bg-[#0640AD] text-white py-2 rounded-lg hover:bg-[#05368F] transition-colors flex items-center justify-center gap-2">
                         Read More
                         <ChevronRight size={16} />
                       </button>
@@ -164,4 +164,3 @@ const BlogPage = () => {
 };
 
 export default BlogPage;
-                   

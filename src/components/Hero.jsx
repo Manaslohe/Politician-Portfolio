@@ -62,9 +62,9 @@ const Hero = () => {
         onClick={handleScrollToBlog}
         style={{ zIndex: 30 }}
       >
-        <ArrowDown className="w-4 h-4 lg:w-9 text-sky-500 lg:h-9 group-hover:translate-y-1 transition-transform duration-300" />
+        <ArrowDown className="w-4 h-4 lg:w-9 text-[#0640AD] lg:h-9 group-hover:translate-y-1 transition-transform duration-300" />
         <span
-          className="text-xs lg:text-xl font-bold tracking-[0.02em] px-4 py-2 transition-colors duration-300 group-hover:text-sky-500"
+          className="text-xs lg:text-xl font-bold tracking-[0.02em] px-4 py-2 transition-colors duration-300 group-hover:text-[#0640AD]"
           style={{ color: 'white' }}
         >
           Scroll to website

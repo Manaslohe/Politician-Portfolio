@@ -161,14 +161,14 @@ const VideoGallery = () => {
 							</span>
 							<span>{video.duration}</span>
 						</div>
-						<div className="text-orange-600 font-medium text-sm group-hover:text-orange-700 transition-colors">
+						<div className="text-[#0640AD] font-medium text-sm group-hover:text-[#0640AD]/90 transition-colors">
 							Watch Now
 						</div>
 					</div>
 				</div>
 
 				{/* Hover border effect */}
-				<div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-orange-200 transition-all duration-300 pointer-events-none"></div>
+				<div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-[#0640AD]/20 transition-all duration-300 pointer-events-none"></div>
 			</div>
 		</div>
 	);
@@ -209,7 +209,7 @@ const VideoGallery = () => {
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				{/* Header */}
 				<div className="text-center mb-8 md:mb-16">
-					<div className="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full text-orange-800 text-sm font-medium mb-4">
+					<div className="inline-flex items-center px-4 py-2 bg-[#0640AD]/10 rounded-full text-[#0640AD] text-sm font-medium mb-4">
 						<Play size={16} className="mr-2" />
 						Video Gallery
 					</div>

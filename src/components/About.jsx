@@ -25,7 +25,7 @@ const About = () => {
               </blockquote>
               
               <div className="text-right">
-                <cite className="text-orange-500 text-2xl font-bold not-italic">Vikas Thakre</cite>
+                <cite className="text-[#0640AD] text-2xl font-bold not-italic">Vikas Thakre</cite>
               </div>
             </div>
           </div>
@@ -34,7 +34,7 @@ const About = () => {
           <div className="bg-white p-8 lg:p-16 flex flex-col justify-center rounded-lg shadow-md">
             <div className="space-y-8">
               {/* Small Header */}
-              <p className="text-orange-500 text-sm font-medium tracking-wide uppercase">
+              <p className="text-[#0640AD] text-sm font-medium tracking-wide uppercase">
                 A Brief Introduction
               </p>
 
@@ -45,7 +45,7 @@ const About = () => {
                   Vikas Thakre
                 </h1>
                 {/* Orange underline */}
-                <div className="w-16 h-1 bg-blue-500 mb-8"></div>
+                <div className="w-16 h-1 bg-[#0640AD] mb-8"></div>
               </div>
 
               {/* Description Text */}

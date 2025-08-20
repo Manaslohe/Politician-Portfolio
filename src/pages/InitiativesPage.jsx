@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { HardHat, Book, Users, Heart, Home } from 'lucide-react';
 import BackButton from '../components/BackButton';
 import BackToTopButton from '../components/BackToTopButton';
 
@@ -9,31 +8,31 @@ const initiatives = [
 		title: 'Development Projects',
 		description:
 			'Roadworks, drainage systems, ward-wise amenities upgrades across Nagpur West.',
-		icon: HardHat,
+		icon: '💧',
 	},
 	{
 		title: 'Education & Youth',
 		description:
 			'Distribution of study materials, setup of youth training camps, and school sanitation drives.',
-		icon: Book,
+		icon: '📚',
 	},
 	{
 		title: 'Women Empowerment',
 		description:
 			'Mahila Melavas, safety helpline facilitation, and job-oriented workshops for women.',
-		icon: Users,
+		icon: '👩‍🎓',
 	},
 	{
 		title: 'Health & Cleanliness',
 		description:
 			'Ayushman Bharat enrollment drives, COVID-19 camps, Swachh Nagpur campaigns.',
-		icon: Heart,
+		icon: '🧼',
 	},
 	{
 		title: 'Nagpur West Local Work',
 		description:
 			'Direct ward engagement with residents, weekly grievance hearings, and project follow-ups.',
-		icon: Home,
+		icon: '🏡',
 	},
 ];
 
@@ -95,10 +94,9 @@ const InitiativesPage = () => {
 								>
 									<div className="flex items-start gap-4">
 										<div className="p-4 bg-orange-100 rounded-full">
-											<initiative.icon
-												size={24}
-												className="text-orange-500"
-											/>
+											<span className="text-orange-500 text-3xl">
+												{initiative.icon}
+											</span>
 										</div>
 										<div className="flex-1">
 											<h3 className="text-xl font-semibold text-gray-900 mb-2">

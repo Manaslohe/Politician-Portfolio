@@ -37,7 +37,7 @@ const BlogList = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <h2 className="text-5xl lg:text-6xl font-bold mb-4">
-            <span className="text-orange-500">Latest</span>{' '}
+            <span className="text-[#0640AD]">Latest</span>{' '}
             <span className="text-gray-900">Updates</span>
           </h2>
         </div>
@@ -75,7 +75,7 @@ const BlogList = () => {
                 {/* Category Badge */}
                 <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold text-white transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ${
                   index === 0 
-                    ? 'bg-blue-500' 
+                    ? 'bg-[#0640AD]' 
                     : index === 1 
                     ? 'bg-purple-500'
                     : 'bg-green-500'
@@ -116,7 +116,7 @@ const BlogList = () => {
                   {/* Read More Arrow */}
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                     index === 0 
-                      ? 'bg-blue-50 group-hover:bg-blue-500' 
+                      ? 'bg-blue-50 group-hover:bg-[#0640AD]' 
                       : index === 1 
                       ? 'bg-purple-50 group-hover:bg-purple-500'
                       : 'bg-green-50 group-hover:bg-green-500'
@@ -124,7 +124,7 @@ const BlogList = () => {
                     <svg 
                       className={`w-5 h-5 transition-all duration-300 group-hover:translate-x-1 ${
                         index === 0 
-                          ? 'text-blue-500 group-hover:text-white' 
+                          ? 'text-[#0640AD] group-hover:text-white' 
                           : index === 1 
                           ? 'text-purple-500 group-hover:text-white'
                           : 'text-green-500 group-hover:text-white'
@@ -154,7 +154,7 @@ const BlogList = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <button
-            className="group bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-1"
+            className="group bg-gradient-to-r from-[#0640AD] to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-1"
             onClick={() => navigate('/blog')}
           >
             <span className="flex items-center gap-2">

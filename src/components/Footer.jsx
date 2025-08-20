@@ -31,7 +31,7 @@ const Footer = () => {
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight mb-3">
                   Vikas Thakre
                 </h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full"></div>
+                <div className="w-16 h-1 bg-gradient-to-r from-[#0640AD] to-[#0640AD] rounded-full"></div>
               </div>
               
               <p className="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-md">
@@ -58,7 +58,7 @@ const Footer = () => {
             <div>
               <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-6 relative">
                 Navigation
-                <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-orange-400 rounded-full"></div>
+                <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-[#0640AD] rounded-full"></div>
               </h3>
               <nav>
                 <ul className="space-y-3">
@@ -66,7 +66,7 @@ const Footer = () => {
                     <li key={link.name}>
                       <a
                         href={link.href}
-                        className="group text-gray-600 hover:text-orange-500 transition-all duration-200 text-base font-normal flex items-center gap-2"
+                        className="group text-gray-600 hover:text-[#0640AD] transition-all duration-200 text-base font-normal flex items-center gap-2"
                       >
                         <span className="group-hover:translate-x-1 transition-transform duration-200">
                           {link.name}
@@ -83,7 +83,7 @@ const Footer = () => {
             <div>
               <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-6 relative">
                 Follow Us
-                <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-orange-400 rounded-full"></div>
+                <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-[#0640AD] rounded-full"></div>
               </h3>
               
               <div className="space-y-4">
@@ -137,7 +137,7 @@ const Footer = () => {
         </div>
 
         {/* Decorative bottom border */}
-        <div className="h-1 bg-gradient-to-r from-orange-400 via-red-400 to-orange-500"></div>
+        <div className="h-1 bg-gradient-to-r from-[#0640AD] via-[#0640AD] to-[#0640AD]"></div>
       </div>
     </footer>
   );
