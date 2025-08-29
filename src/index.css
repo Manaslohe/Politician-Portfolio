@@ -18,3 +18,17 @@ h1, h2, h3, h4, h5, h6 {
 .animate-fade-in {
   animation: fadeIn 1s ease-out forwards;
 }
+
+body.hide-header header,
+body.hide-header .hero-content {
+  display: none;
+}
+
+body.hide-hero .hero-content {
+  display: none;
+}
+
+body.hide-content header,
+body.hide-content .hero-content {
+  display: none !important;
+}

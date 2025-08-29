@@ -39,7 +39,7 @@ const AboutPage = () => {
 
   return (
     <motion.div
-      className="min-h-screen bg-gray-50"
+      className="min-h-auto bg-gray-100"
       initial="hidden"
       animate="visible"
       exit="exit"

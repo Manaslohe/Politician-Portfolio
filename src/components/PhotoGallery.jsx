@@ -1,29 +1,39 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
+import galleryData from '../data/galleryData';
 
 const PhotoGallery = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(null);
+  // Use only the first 6 images from the gallery data
+  const photos = galleryData.galleryImages.slice(0, 6);
 
-  const photos = [
-    { id: 1, url: '/gallery/1.jpg', title: 'Community Rally 2024' },
-    { id: 2, url: '/gallery/2.jpg', title: 'Youth Conference' },
-    { id: 3, url: '/gallery/3.webp', title: 'Town Hall Meeting' },
-    // Add more photos
-  ];
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % photos.length);
+  const openModal = (image) => {
+    setSelectedImage(image);
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + photos.length) % photos.length);
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
+  const nextImage = () => {
+    if (!selectedImage) return;
+    const currentIndex = photos.findIndex(img => img.id === selectedImage.id);
+    const nextIndex = (currentIndex + 1) % photos.length;
+    setSelectedImage(photos[nextIndex]);
+  };
+
+  const prevImage = () => {
+    if (!selectedImage) return;
+    const currentIndex = photos.findIndex(img => img.id === selectedImage.id);
+    const prevIndex = (currentIndex - 1 + photos.length) % photos.length;
+    setSelectedImage(photos[prevIndex]);
   };
 
   return (
-    <section className="py-20 bg-gray-50 overflow-hidden">
+    <section className="py-16 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Photo Gallery
           </h2>
@@ -33,58 +43,196 @@ const PhotoGallery = () => {
           <div className="w-24 h-1 bg-[#0640AD] mx-auto rounded-full mt-6"></div>
         </div>
 
-        {/* Gallery Slider */}
-        <div className="relative group">
-          <div className="relative h-[400px] md:h-[600px] overflow-hidden rounded-2xl shadow-lg">
-            {photos.map((photo, index) => (
-              <div
-                key={photo.id}
-                className={`absolute w-full h-full transition-all duration-700 ease-in-out transform ${
-                  index === currentIndex ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
-                }`}
-              >
-                <img
-                  src={photo.url}
-                  alt={photo.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                  <h3 className="text-white text-2xl font-semibold">{photo.title}</h3>
-                </div>
+        {/* Gallery Grid - Responsive and similar to Gallery.jsx */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
+          {/* First Row - 3 images on desktop, 2 on mobile */}
+          <div className="col-span-1">
+            <div 
+              className="relative w-full h-48 md:h-80 rounded-lg overflow-hidden shadow-md cursor-pointer group"
+              onClick={() => openModal(photos[0])}
+            >
+              <img
+                src={photos[0].src}
+                alt={photos[0].alt}
+                className="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
+                <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={32} />
               </div>
-            ))}
+              <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-white text-sm md:text-base font-medium truncate">{photos[0].title}</h3>
+              </div>
+            </div>
           </div>
 
-          {/* Navigation Buttons */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-md p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-gray-100"
-          >
-            <ChevronLeft className="w-6 h-6 text-gray-700" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-md p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-gray-100"
-          >
-            <ChevronRight className="w-6 h-6 text-gray-700" />
-          </button>
+          <div className="col-span-1">
+            <div 
+              className="relative w-full h-48 md:h-80 rounded-lg overflow-hidden shadow-md cursor-pointer group"
+              onClick={() => openModal(photos[1])}
+            >
+              <img
+                src={photos[1].src}
+                alt={photos[1].alt}
+                className="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
+                <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={32} />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-white text-sm md:text-base font-medium truncate">{photos[1].title}</h3>
+              </div>
+            </div>
+          </div>
+
+          {/* Third image (hidden on mobile) */}
+          <div className="hidden md:block">
+            <div 
+              className="relative w-full h-80 rounded-lg overflow-hidden shadow-md cursor-pointer group"
+              onClick={() => openModal(photos[2])}
+            >
+              <img
+                src={photos[2].src}
+                alt={photos[2].alt}
+                className="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
+                <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={32} />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-white text-sm md:text-base font-medium truncate">{photos[2].title}</h3>
+              </div>
+            </div>
+          </div>
+          
+          {/* Second Row - Reorganized for mobile */}
+          <div className="col-span-2 md:hidden">
+            <div 
+              className="relative w-full h-48 rounded-lg overflow-hidden shadow-md cursor-pointer group"
+              onClick={() => openModal(photos[2])}
+            >
+              <img
+                src={photos[2].src}
+                alt={photos[2].alt}
+                className="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
+                <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={32} />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-white text-sm md:text-base font-medium truncate">{photos[2].title}</h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-1 md:col-span-2">
+            <div 
+              className="relative w-full h-48 md:h-80 rounded-lg overflow-hidden shadow-md cursor-pointer group"
+              onClick={() => openModal(photos[3])}
+            >
+              <img
+                src={photos[3].src}
+                alt={photos[3].alt}
+                className="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
+                <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={32} />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-white text-sm md:text-base font-medium truncate">{photos[3].title}</h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-1">
+            <div 
+              className="relative w-full h-48 md:h-80 rounded-lg overflow-hidden shadow-md cursor-pointer group"
+              onClick={() => openModal(photos[4])}
+            >
+              <img
+                src={photos[4].src}
+                alt={photos[4].alt}
+                className="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
+                <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={32} />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-white text-sm md:text-base font-medium truncate">{photos[4].title}</h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-2 md:hidden">
+            <div 
+              className="relative w-full h-48 rounded-lg overflow-hidden shadow-md cursor-pointer group"
+              onClick={() => openModal(photos[5])}
+            >
+              <img
+                src={photos[5].src}
+                alt={photos[5].alt}
+                className="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
+                <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={32} />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-white text-sm md:text-base font-medium truncate">{photos[5].title}</h3>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        {/* Dots Navigation */}
-        <div className="flex justify-center mt-8 gap-2">
-          {photos.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex ? 'bg-[#0640AD]' : 'bg-gray-300 hover:bg-gray-400'
-              }`}
-            ></button>
-          ))}
+        {/* View All Photos Button */}
+        <div className="text-center mt-8">
+          <a
+            href="/gallery"
+            className="inline-block bg-[#0640AD] hover:bg-[#053490] text-white font-semibold px-8 py-3 rounded-md transition-colors duration-300 shadow-lg hover:shadow-xl"
+          >
+            View Full Gallery
+          </a>
         </div>
       </div>
+
+      {/* Enhanced Modal */}
+      {selectedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4" onClick={closeModal}>
+          <div className="relative max-w-4xl max-h-full" onClick={e => e.stopPropagation()}>
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-white hover:text-gray-300 text-2xl z-10 bg-black/40 rounded-full p-2"
+            >
+              ×
+            </button>
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              className="max-w-full max-h-[85vh] object-contain rounded-lg"
+            />
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+              <h3 className="text-white text-xl font-medium">{selectedImage.title}</h3>
+              <p className="text-white/80 text-sm">{selectedImage.description}</p>
+            </div>
+            
+            {/* Navigation buttons */}
+            <button
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60"
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <button
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60"
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
 
 export default PhotoGallery;
+

@@ -8,6 +8,7 @@ import InitiativesPage from "./pages/InitiativesPage";
 import VolunteerPage from "./pages/VolunteerPage";
 import GalleryPage from "./pages/GalleryPage";
 import BlogPage from "./pages/BlogPage";
+import BlogDetail from "./components/BlogDetail";
 
 function App() {
 	return (
@@ -22,6 +23,7 @@ function App() {
 					<Route path="/volunteer" element={<VolunteerPage />} />
 					<Route path="/gallery" element={<GalleryPage />} />
 					<Route path="/blog" element={<BlogPage />} />
+					<Route path="/blog/:id" element={<BlogDetail />} />
 				</Routes>
 			</div>
 		</BrowserRouter>

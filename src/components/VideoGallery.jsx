@@ -119,11 +119,6 @@ const VideoGallery = () => {
 									<Play size={24} className="text-white ml-1" fill="currentColor" />
 								</div>
 							</div>
-
-							{/* Duration Badge */}
-							<div className="absolute bottom-3 right-3 bg-black/80 text-white text-xs px-2 py-1 rounded">
-								{video.duration}
-							</div>
 						</>
 					)}
 
@@ -151,20 +146,6 @@ const VideoGallery = () => {
 					<p className="text-gray-600 text-sm md:text-base line-clamp-2">
 						{video.description}
 					</p>
-
-					{/* Action indicators */}
-					<div className="flex items-center justify-between mt-4">
-						<div className="flex items-center gap-4 text-xs md:text-sm text-gray-500">
-							<span className="flex items-center gap-1">
-								<Volume2 size={14} />
-								HD Quality
-							</span>
-							<span>{video.duration}</span>
-						</div>
-						<div className="text-[#0640AD] font-medium text-sm group-hover:text-[#0640AD]/90 transition-colors">
-							Watch Now
-						</div>
-					</div>
 				</div>
 
 				{/* Hover border effect */}

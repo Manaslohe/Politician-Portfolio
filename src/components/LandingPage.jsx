@@ -23,19 +23,12 @@ const LandingPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-
   return (
     <div className="relative">
       <Header />
       <Hero />
-      <BlogList />
       <About />
+      <BlogList />
       <VisionMission />
       <VideoGallery />
       <PhotoGallery />
