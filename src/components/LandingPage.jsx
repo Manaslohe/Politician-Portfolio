@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Hero from './Hero';
 import BlogList from './BlogList';
+import SocialMediaPosts from './SocialMediaPosts';
 import About from './About';
 import VisionMission from './VisionMission';
 import VideoGallery from './VideoGallery';
@@ -29,6 +30,7 @@ const LandingPage = () => {
       <Hero />
       <About />
       <BlogList />
+      <SocialMediaPosts />
       <VisionMission />
       <VideoGallery />
       <PhotoGallery />
