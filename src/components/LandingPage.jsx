@@ -4,7 +4,6 @@ import Hero from './Hero';
 import BlogList from './BlogList';
 import SocialMediaPosts from './SocialMediaPosts';
 import About from './About';
-import VisionMission from './VisionMission';
 import VideoGallery from './VideoGallery';
 import PhotoGallery from './PhotoGallery';
 import CallToAction from './CallToAction';
@@ -31,7 +30,6 @@ const LandingPage = () => {
       <About />
       <BlogList />
       <SocialMediaPosts />
-      <VisionMission />
       <VideoGallery />
       <PhotoGallery />
       <CallToAction />
