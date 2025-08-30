@@ -8,7 +8,7 @@ const Hero = () => {
   const [activeStory, setActiveStory] = useState(0);
   const [showDescription, setShowDescription] = useState(false);
   const [progress, setProgress] = useState(0);
-  const videoId = "YOUR_YOUTUBE_VIDEO_ID"; // Replace with your YouTube video ID
+  const videoId = "IH3jvllzLSU"; // Updated with the provided YouTube video ID
 
   return (
     <div className="relative min-h-auto overflow-hidden">
@@ -38,22 +38,17 @@ const Hero = () => {
               >
                 {/* Thumbnail Image */}
                 <img 
-                  src="https://picsum.photos/seed/hero/800/450" 
+                  src="/thumbnail.png" 
                   alt="Video Thumbnail" 
                   className="w-full h-full object-cover"
                 />
                 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all duration-300 flex flex-col items-center justify-center">
+                {/* Overlay */} 
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300 flex-col items-center justify-start lg:flex hidden lg:pt-64">
                   {/* Play Button */}
                   <button className="w-16 h-16 md:w-20 md:h-20 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Play className="w-8 h-8 md:w-10 md:h-10 text-[#0640AD] ml-1" />
                   </button>
-                  
-                  {/* Title */}
-                  <h3 className="text-white text-xl md:text-3xl font-bold mt-4 text-center px-4">
-                    #Nagpur Cha Vikas
-                  </h3>
                 </div>
               </div>
             ) : (
