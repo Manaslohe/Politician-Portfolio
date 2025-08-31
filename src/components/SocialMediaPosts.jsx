@@ -5,8 +5,8 @@ const SocialMediaPosts = () => {
   const posts = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
-      content: "Proud to announce our new community initiative that will benefit thousands of local residents. Together we can make a difference! 🌟 #CommunityFirst #Progress",
+      image: "/post/1.jpg",
+      content: "The felicitation ceremony of the newly appointed office bearers of the Nagpur South-West constituency and the booth workers’ convention were held today with great enthusiasm. On this occasion, the office bearers were honored, and guidance was provided to strengthen the organization at the booth level.",
       likes: "2.5K",
       comments: "342",
       shares: "128"

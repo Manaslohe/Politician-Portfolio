@@ -1,23 +1,14 @@
 const bannerBlogData = [
   {
     id: 6,
-    title: "Empowering Women Entrepreneurs",
-    coverImage: "https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    excerpt: "Discover how Vikas Thakre's initiatives are empowering women entrepreneurs in Nagpur to achieve their dreams.",
+    title: "“Vote Thief, Leave the Chair” Candle March",
+    coverImage: "/trending/1.jpeg",
+    excerpt: "Protest against alleged voter list manipulation in recent elections.",
     content: `
-      <p>Women entrepreneurs are the backbone of a thriving economy. At Vikas Thakre's office, we are committed to empowering women in Nagpur by providing them with the resources, training, and support they need to succeed in their entrepreneurial journeys.</p>
-      <p>Our initiatives include:</p>
-      <ul>
-        <li>Access to microfinance and funding opportunities</li>
-        <li>Workshops on business management and leadership</li>
-        <li>Networking events to connect women entrepreneurs with industry leaders</li>
-        <li>Mentorship programs to guide them through challenges</li>
-      </ul>
-      <p>Through these efforts, we aim to create a supportive ecosystem where women can thrive and contribute to the economic growth of Nagpur. Join us in celebrating and supporting the incredible women who are shaping the future of our city.</p>
+      On August 15, 2025, Vikas Thakre led the Nagpur District Congress Committee in a candlelight protest at Samvidhan Chowk. The demonstration, titled “Vote Thief, Leave the Chair,” accused the BJP—and tacitly the Election Commission—of manipulating voter lists in the 2024 Lok Sabha and Assembly elections. The march and rally highlighted an alleged spike of 33,000 voters in just five months in Nagpur’s South-West Assembly constituency, as well as irregular increases in Kamptee. Thakre and his team demanded an investigation into the suspected electoral fraud
     `,
-    date: "2024-02-01",
+    date: "2025-08-20",
     readTime: 6,
-    category: "Empowerment",
     author: "Team Vikas Thakre"
   }
 ];

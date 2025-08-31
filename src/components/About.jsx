@@ -18,14 +18,12 @@ const About = () => {
             <div className="absolute bottom-10 left-0 right-10 bg-gray-500 text-white p-8 lg:p-12 rounded-lg shadow-lg">
               <blockquote className="mb-8">
                 <p className="text-white text-lg lg:text-xl leading-relaxed font-normal italic mb-6">
-                  Our mission is to provide executive leadership,<br />
-                  as well as set priorities and goals for the City<br />
-                  and its neighbourhoods.
+                  Leadership is not about power, it is about responsibility — to serve people, shape progress, and build a better tomorrow.
                 </p>
               </blockquote>
               
               <div className="text-right">
-                <cite className="text-[#0640AD] text-2xl font-bold not-italic">Vikas Thakre</cite>
+                <cite className="text-white text-2xl font-bold not-italic">Vikas Thakre</cite>
               </div>
             </div>
           </div>
@@ -51,10 +49,12 @@ const About = () => {
               {/* Description Text */}
               <div className="space-y-6">
                 <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
-                  An experienced public servant and two-time MLA from Nagpur West, Vikas Thakre has dedicated his life to people's welfare and inclusive development. His leadership journey spans across grassroots activism to executive governance, promoting economic development and wealth creation, social development, and improvement of the environment.
+                 Vikas Thakre is a people’s leader whose political journey has been deeply rooted in the streets and spirit of Nagpur. From serving as the Mayor of the city to representing West Nagpur in the Legislative Assembly, his vision has always been clear — to make Nagpur a city of opportunity, inclusivity, and growth.
+<br/><br/>
+Guided by values of service, accessibility, and grassroots connection, Vikas Thakre has consistently worked towards better infrastructure, youth empowerment, healthcare, and community welfare. His leadership reflects a promise of change — a Nagpur that is stronger, modern, and more humane.
                 </p>
                 <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
-                  Vikas Thakre also has various other duties in relation to culture and tourism, including responsibility for the city and its government.
+       For him, leadership is not about power, but about responsibility: ensuring that every Nagpurkar feels heard, supported, and part of the city’s progress.
                 </p>
               </div>
 

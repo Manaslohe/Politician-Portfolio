@@ -39,13 +39,13 @@ const VolunteerPage = () => {
           >
             {/* Left Column - Content */}
             <div className="text-left lg:pr-12">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                Let's build Nagpur
-                <span className="text-[#0640AD]"> together</span>
+              <h1 className="text-4xl md:text-5xl text-nowrap lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
+               Join The Movement <br/>
+                <span className="text-[#0640AD]">#NagpurChaVikas</span>
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                From local volunteers to digital warriors — every voice matters in shaping our city's future.
+                From on ground members to digital change makers — every voice matters in shaping our city's future.
               </p>
 
               <div className="hidden lg:block space-y-6">

@@ -33,14 +33,21 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 w-full bg-[#0640AD] shadow-lg">
       <div className="px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex items-center h-24 w-full">
-          {/* Logo */}
-          <div className="flex items-start space-x-3 flex-shrink-0 flex-col">
-            <span className="text-2xl lg:text-3xl font-space font-bold text-white">
-              Vikas Thakre
-            </span>
-            <span className="text-[3vw] lg:text-base font-space text-white lg:hidden">
-              #Nagpur Cha Vikas
-            </span>
+          {/* Logo and Text */}
+          <div className="flex items-center space-x-3 flex-shrink-0">
+            <img
+              src="/logo.png"
+              alt="Logo"
+              className="h-12 w-12 object-contain"
+            />
+            <div className="flex flex-col">
+              <span className="text-2xl lg:text-3xl font-space font-bold text-white">
+                Vikas Thakre
+              </span>
+              <span className="text-[3vw] lg:text-base font-space text-white">
+                MLA - West Nagpur
+              </span>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
@@ -63,7 +70,7 @@ const Header = () => {
           <div className="hidden lg:block ml-auto flex-shrink-0">
             <Link to="/volunteer">
               <button className="bg-white hover:bg-yellow-300 text-[#0640AD] font-space px-8 py-3 rounded-full transition-all duration-300 font-semibold">
-                Join #Nagpur Cha Vikas
+                Join #NagpurChaVikas
               </button>
             </Link>
           </div>
@@ -93,7 +100,7 @@ const Header = () => {
             ))}
             <Link to="/volunteer">
               <button className="w-full bg-white hover:bg-yellow-300 text-[#0640AD] font-semibold py-3 rounded-full transition-colors mt-4">
-                Join #Nagpur Cha Vikas
+                Join #NagpurChaVikas
               </button>
             </Link>
           </div>

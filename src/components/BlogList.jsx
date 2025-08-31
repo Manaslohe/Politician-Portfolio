@@ -25,7 +25,7 @@ const BlogList = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-16 relative">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-[#0640AD]"></div>
+       
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 font-serif">
             <span className="text-[#0640AD]">News &</span>{' '}
             <span className="text-gray-900">Updates</span>

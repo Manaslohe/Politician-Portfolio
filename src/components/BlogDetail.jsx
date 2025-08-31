@@ -59,9 +59,7 @@ const BlogDetail = () => {
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 lg:p-16 text-white">
           <div className="max-w-4xl mx-auto">
             <div className="mb-4 flex items-center">
-              <span className="bg-[#0640AD] text-xs font-semibold px-3 py-1 rounded-full mr-3">
-                {blog.category || "General"}
-              </span>
+             
               <span className="text-sm text-gray-300">
                 {new Date(blog.date).toLocaleDateString('en-US', {
                   month: 'long',
