@@ -1,13 +1,16 @@
 const bannerBlogData = [
   {
     id: 6,
-    title: "“Vote Thief, Leave the Chair” Candle March",
-    coverImage: "/trending/1.jpeg",
-    excerpt: "Protest against alleged voter list manipulation in recent elections.",
+    title: "District Hospital, Mankapur",
+    coverImage: "/trending/cover.jpeg",
+    videoUrl: "https://www.youtube.com/watch?v=GeknxuSmurA",
+    excerpt: "A New Foundation of Healthcare for West Nagpur",
     content: `
-      On August 15, 2025, Vikas Thakre led the Nagpur District Congress Committee in a candlelight protest at Samvidhan Chowk. The demonstration, titled “Vote Thief, Leave the Chair,” accused the BJP—and tacitly the Election Commission—of manipulating voter lists in the 2024 Lok Sabha and Assembly elections. The march and rally highlighted an alleged spike of 33,000 voters in just five months in Nagpur’s South-West Assembly constituency, as well as irregular increases in Kamptee. Thakre and his team demanded an investigation into the suspected electoral fraud
+     After the OPD services began, a large number of citizens availed treatment. Now, the hospital offers 24x7 emergency and trauma services, a Hirkani ward, ample parking, and state-of-the-art diagnostic facilities.
+
+The effort to establish this facility is an important step in #NagpurChaVikas. With this, not only West Nagpur but the entire city of Nagpur is now receiving prompt and quality healthcare services.
     `,
-    date: "2025-08-20",
+    date: "2025-08-29",
     readTime: 6,
     author: "Team Vikas Thakre"
   }

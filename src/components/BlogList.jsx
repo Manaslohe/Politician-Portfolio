@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CalendarDays, ArrowRight, Clock, Flag, Award } from 'lucide-react';
 import blogData from '../data/blogData';
@@ -7,6 +7,7 @@ import BlogCard from './BlogCard';
 
 const BlogList = () => {
   const navigate = useNavigate();
+  const [showVideo, setShowVideo] = useState(false);
   
   // Fetch the banner blog from the separate array
   const bannerBlog = bannerBlogData[0];
@@ -18,6 +19,13 @@ const BlogList = () => {
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString('en-US', options);
+  };
+
+  // Extract video ID from YouTube URL
+  const getYoutubeId = (url) => {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length === 11) ? match[2] : null;
   };
 
   return (
@@ -48,13 +56,44 @@ const BlogList = () => {
               
               <div className="flex flex-col lg:flex-row">
                 {/* Image container */}
-                <div className="relative lg:w-1/2 h-72 lg:h-[400px]">
-                  <img 
-                    src={bannerBlog.coverImage} 
-                    alt={bannerBlog.title}
-                    className="w-full h-full object-cover" 
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="relative lg:w-1/2 h-72 lg:h-[400px] cursor-pointer" onClick={() => setShowVideo(true)}>
+                  {showVideo ? (
+                    <div className="absolute inset-0 bg-black">
+                      <iframe
+                        className="w-full h-full"
+                        src={`https://www.youtube.com/embed/${getYoutubeId(bannerBlog.videoUrl)}?autoplay=1`}
+                        title={bannerBlog.title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                      <button 
+                        className="absolute top-2 right-2 bg-white/80 p-2 rounded-full"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setShowVideo(false);
+                        }}
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  ) : (
+                    <>
+                      <img 
+                        src={bannerBlog.coverImage} 
+                        alt={bannerBlog.title}
+                        className="w-full h-full object-cover" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-16 h-16 bg-white/30 rounded-full flex items-center justify-center">
+                            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                              <div className="w-0 h-0 border-t-8 border-b-8 border-l-12 border-transparent border-l-[#0640AD] ml-1"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )}
                 </div>
                 
                 {/* Content */}
